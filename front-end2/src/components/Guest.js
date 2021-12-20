@@ -118,7 +118,7 @@ const Guest = (props) => {
                     <div>{errors.bring}</div>
                 </div>
 
-            </form>
+            </form> 
         </div>
     )
 
