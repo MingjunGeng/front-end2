@@ -40,8 +40,8 @@ const Guest = (props) => {
                     <label>How many people in your party?
                         <input 
                             type='text'
-                            name='numRsvp'
-                            checked={values.numRsvp}
+                            name='party'
+                            checked={values.party}
                             onChange={onChange}
                         />
 
