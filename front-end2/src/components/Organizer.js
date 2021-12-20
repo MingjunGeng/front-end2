@@ -109,7 +109,17 @@ const Organizer = (props) => {
                         placeholder="Enter Potluck Location"
                     />
                 </label>
-
+            </div>
+            <div id="dishes">
+                <div id="dishes-needed">
+                    {/* place component for adding dishes to list here  */}
+                </div>
+                <div id="dishes-list">
+                    {/* place list returned from other component here */}
+                </div>
+            </div>
+            <div className='submit-btn'>
+                <button id='submit' disabled={disabled}>Create Potluck!</button>
             </div>
         </div>
     )
