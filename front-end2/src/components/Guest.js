@@ -1,4 +1,14 @@
 import React from 'react';
+// import styled from 'styled-components';
+
+
+// const StyledGuest = styled.div`
+//     display: flex;
+//     width: 60%;
+//     justify-content: space-between;
+//     padding: 10px;
+
+// `;
 
 const Guest = (props) => {
     const { values, submit, change, disabled, errors } = props;
