@@ -49,34 +49,36 @@ const Guest = (props) => {
                 </div>
 
                 <div id='guest-info'>
-                    <label>Name 
+                    <label>Guest Name 
                         <input 
-                            value={values.name}
+                            value={values.guestName}
                             onChange={onChange}
-                            name='name'
+                            name='guestName'
                             type='text'
-                            placeholder='Enter name'
+                            placeholder='Enter your name here'
                             maxLength='30'
                         />
                     </label>
 
                     <label>E-mail Address
                         <input
-                            value={values.email}
+                            value={values.guestEmail}
                             onChange={onChange}
-                            name='email'
+                            name='guestEmail'
                             type='text'
-                            placeholder='Enter email'
+                            placeholder='Enter your email here'
                         />
                     </label>
 
-                    <label>Phone #
+                    <label>Phone Number
                         <input 
-                            value={values.phone}
+                            value={values.guestPhone}
                             onChange={onChange}
-                            name='phone'
-                            type='text'
-                            maxLength='10'
+                            name='guestPhone'
+                            type='tel'
+                            placeholder='Format: 123-456-7890'
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            maxLength='12'
                         />
                     </label>
 
@@ -111,9 +113,9 @@ const Guest = (props) => {
 
 
                 <div className='errors'>
-                    <div>{errors.name}</div>
-                    <div>{errors.email}</div>
-                    <div>{errors.phone}</div>
+                    <div>{errors.guestName}</div>
+                    <div>{errors.guestEmail}</div>
+                    <div>{errors.guestPhone}</div>
                     <div>{errors.category}</div>
                     <div>{errors.bring}</div>
                 </div>
