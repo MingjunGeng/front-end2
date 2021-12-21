@@ -44,3 +44,7 @@
     /* background-color: #656e68;  */
      /* border:3px solid red;   */
   }
+
+  .error {
+      color: red;
+  }
