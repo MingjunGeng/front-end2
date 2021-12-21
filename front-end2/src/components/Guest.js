@@ -85,7 +85,7 @@ const Guest = (props) => {
                             type='radio'
                             name='attending'
                             value='yes'
-                            // checked={values.attending === 'yes'}
+                            checked={values.attending === 'yes'}
                             onChange={onChange}
                         />
                     </label>
@@ -94,7 +94,7 @@ const Guest = (props) => {
                             type='radio'
                             name='attending'
                             value='no'
-                            // checked={values.attending === 'no'}
+                            checked={values.attending === 'no'}
                             onChange={onChange}
                         />
                     </label>
@@ -103,7 +103,7 @@ const Guest = (props) => {
                 <div id='guest-info'>
                     <label>Guest Name 
                         <input 
-                            // value={values.guestName}
+                            value={values.guestName}
                             onChange={onChange}
                             name='guestName'
                             type='text'
@@ -114,7 +114,7 @@ const Guest = (props) => {
 
                     <label>E-mail Address
                         <input
-                            // value={values.guestEmail}
+                            value={values.guestEmail}
                             onChange={onChange}
                             name='guestEmail'
                             type='text'
@@ -124,7 +124,7 @@ const Guest = (props) => {
 
                     <label>Phone Number
                         <input 
-                            // value={values.guestPhone}
+                            value={values.guestPhone}
                             onChange={onChange}
                             name='guestPhone'
                             type='tel'
@@ -136,7 +136,7 @@ const Guest = (props) => {
 
                     <label>Potluck Category 
                         <select name='category' 
-                        // value={values.category}
+                        value={values.category}
                          onChange={onChange}>
                             <option value=''>------Select------</option>
                             <option value='Appetizer'>Appetizer</option>
@@ -151,7 +151,7 @@ const Guest = (props) => {
 
                     <label>What I'll Bring
                         <input 
-                            // value={values.bring}
+                            value={values.bring}
                             onChange={onChange}
                             name='bring'
                             type='text'
