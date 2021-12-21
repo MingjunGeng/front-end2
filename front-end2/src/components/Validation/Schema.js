@@ -1,5 +1,17 @@
 import * as yup from 'yup';
 
+
+const homeSchema = yup.object().shape({
+    hostName: yup
+        .string()
+        .required('Host name is required'),
+
+    guestPassword: yup
+        .string()
+        .required('Password provided by host is required')
+        
+})
+
 const organizerSchema = yup.object().shape({
     organizerName: yup
         .string()
@@ -77,4 +89,4 @@ const guestSchema = yup.object().shape({
 
 })
 
-export default {guestSchema, organizerSchema};
+export default { homeSchema, organizerSchema, guestSchema };
