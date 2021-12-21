@@ -2,38 +2,40 @@ import React from 'react';
 // import styled from 'styled-components';
 
 
-// const StyledGuest = styled.div``
-//
-// #rsvp {
-//     display: flex;
-//     align-items: center;
-//     margin: 10px;
-//     border: 1px black solid;
-//   }
-//   .form {
-//     border: 1px black solid;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: space-between;
-//     justify-content: center;
-//     margin: auto;
-//     width: 90%;
-//   }
-  
-//   label {
-//     display: flex;
-//     justify-content: space-between
-//     margin: 10px;
-//     padding: 10px;
-//   }
-  
-//   input, select {
-//     margin-left: 50px;
-//   }
-//   button {
-//     margin: 20px;
-//   }
+const StyledGuest = styled.div`
 
+#rsvp {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px black solid;
+    background-color: lightgray;
+  }
+.form {
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+  }
+  
+label {
+    display: flex;
+    justify-content: space-between
+    margin: 10px;
+    padding: 10px;
+  }
+  
+input, select {
+    margin-left: 50px;
+  }
+button {
+    margin: 20px;
+    font-weight: bold;
+  }
+`;
 
 const Guest = (props) => {
     const { values, submit, change, disabled, errors } = props;
@@ -50,8 +52,9 @@ const Guest = (props) => {
     }
 
     return (
-        <div className='form'>
-            <h1>Guest Form</h1>
+        <StyledGuest className='form'>
+            <h1>You're invited to a potluck!</h1>
+            <p>Please let us know if you're coming and what you'll be bringing.</p>
             <form id='guest-form' onSubmit={onSubmit}>
                 
                 <div id='rsvp'>
@@ -150,7 +153,7 @@ const Guest = (props) => {
                 </div>
 
             </form> 
-        </div>
+        </StyledGuest>
     )
 
 }
