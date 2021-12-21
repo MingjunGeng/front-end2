@@ -2,13 +2,38 @@ import React from 'react';
 // import styled from 'styled-components';
 
 
-// const StyledGuest = styled.div`
+// const StyledGuest = styled.div``
+//
+// #rsvp {
 //     display: flex;
-//     width: 60%;
-//     justify-content: space-between;
+//     align-items: center;
+//     margin: 10px;
+//     border: 1px black solid;
+//   }
+//   .form {
+//     border: 1px red solid;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: space-between;
+//     justify-content: center;
+//     margin: auto;
+//     width: 90%;
+//   }
+  
+//   label {
+//     display: flex;
+//     justify-content: space-between
+//     margin: 10px;
 //     padding: 10px;
+//   }
+  
+//   input, select {
+//     margin-left: 50px;
+//   }
+//   button {
+//     margin: 20px;
+//   }
 
-// `;
 
 const Guest = (props) => {
     const { values, submit, change, disabled, errors } = props;
