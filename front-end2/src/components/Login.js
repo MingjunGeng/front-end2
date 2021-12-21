@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { useHistory, Link } from 'react-router-dom';
 
+import '../CSS/Login.css'
 
 const initForm = {
     username: '',
@@ -24,20 +25,31 @@ const Login = () =>{
 
     return(
         <div className="login-from">
-            <h1>Login</h1>
+            {/* <h1>Login</h1> */}
             <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="username"
-                value={value.username}
-                onChange={handleChange}
-            />
-            <input
-                type="password"
-                name="password"
-                value={value.password}
-                onChange={handleChange}
-            />
+                <div>
+                    Username:
+                    <br/>
+                    <input
+                        type="text"
+                        name="username"
+                        value={value.username}
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <div>
+                    Password:
+                    <br/>
+                    <input
+                        type="password"
+                        name="password"
+                        value={value.password}
+                        onChange={handleChange}
+                    />
+                </div>
+
+
 
             {/* <label> Role:
                 <select name="role" onChange={handleChange}>
