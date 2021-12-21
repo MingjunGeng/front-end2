@@ -11,7 +11,7 @@ import React from 'react';
 //     border: 1px black solid;
 //   }
 //   .form {
-//     border: 1px red solid;
+//     border: 1px black solid;
 //     display: flex;
 //     flex-direction: column;
 //     align-items: space-between;
@@ -43,7 +43,7 @@ const Guest = (props) => {
         submit(); 
     }
     const onChange = evt => {
-        console.log(evt.target.checked, evt.target.type);
+        // console.log(evt.target.checked, evt.target.type);
         const { name, value, checked, type } = evt.target;
         const valueToUse = type === 'checkbox' ? checked : value;
         change(name, valueToUse);
