@@ -25,9 +25,10 @@ const Guest = (props) => {
     }
 
     return (
-        <div>
+        <div className='form'>
             <h1>Guest Form</h1>
             <form id='guest-form' onSubmit={onSubmit}>
+                
                 <div id='rsvp'>
                     <label>Will you be attending?
                         <input 
@@ -36,15 +37,6 @@ const Guest = (props) => {
                             checked={values.attending}
                             onChange={onChange}
                         />
-                    </label>
-                    <label>How many people in your party?
-                        <input 
-                            type='text'
-                            name='party'
-                            checked={values.party}
-                            onChange={onChange}
-                        />
-
                     </label>
                 </div>
 
@@ -113,6 +105,7 @@ const Guest = (props) => {
 
 
                 <div className='errors'>
+                    <div>{errors.attending}</div>
                     <div>{errors.guestName}</div>
                     <div>{errors.guestEmail}</div>
                     <div>{errors.guestPhone}</div>
