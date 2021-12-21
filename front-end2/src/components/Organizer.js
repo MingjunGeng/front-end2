@@ -121,6 +121,17 @@ const Organizer = (props) => {
             <div className='submit-btn'>
                 <button id='submit' disabled={disabled}>Create Potluck!</button>
             </div>
+            <div className='errors'>
+                    <div>{errors.organizerName}</div>
+                    <div>{errors.organizerEmail}</div>
+                    <div>{errors.organizerPhone}</div>
+                    <div>{errors.organizerPassword}</div>
+                    <div>{errors.potluckDate}</div>
+                    <div>{errors.potluckLocation}</div>
+                    <div>{errors.potluckName}</div>
+                    <div>{errors.potluckTime}</div>
+                </div>
+
         </div>
     )
 
