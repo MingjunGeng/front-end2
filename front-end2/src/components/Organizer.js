@@ -1,3 +1,4 @@
+import { getByDisplayValue } from "@testing-library/react";
 import react from "react";
 import TimePicker from "react-time-picker";
 
@@ -20,7 +21,7 @@ const Organizer = (props) => {
     const today = new Date();
 
     return (
-        <div>
+        <form id="organizer-form">
             <h2>Create a potluck!</h2>
             <p>Submit details about yourself and the event you're organizing in order to share your potluck!</p>
             <div id="event-organizer">'
@@ -33,7 +34,7 @@ const Organizer = (props) => {
                         placeholder='Enter your name here'
                         maxLength='25'
                     />
-            </label>
+                </label>
 
                 <label>Organizer E-mail Address
                     <input
@@ -132,7 +133,10 @@ const Organizer = (props) => {
                     <div>{errors.potluckTime}</div>
                 </div>
 
-        </div>
+        </form>
     )
-
 }
+
+
+
+export default Organizer;
