@@ -30,11 +30,22 @@ const Guest = (props) => {
             <form id='guest-form' onSubmit={onSubmit}>
                 
                 <div id='rsvp'>
-                    <label>Will you be attending?
+                    <p>Will you be attending?</p>
+                    <label>Yes
                         <input 
-                            type='checkbox'
+                            type='radio'
                             name='attending'
-                            checked={values.attending}
+                            value='yes'
+                            checked={values.attending === 'yes'}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>No
+                        <input 
+                            type='radio'
+                            name='attending'
+                            value='no'
+                            checked={values.attending === 'no'}
                             onChange={onChange}
                         />
                     </label>
@@ -74,9 +85,9 @@ const Guest = (props) => {
                         />
                     </label>
 
-                    <label>Category 
+                    <label>Potluck Category 
                         <select name='category' value={values.category} onChange={onChange}>
-                            <option value=''>---Select---</option>
+                            <option value=''>------Select------</option>
                             <option value='Appetizer'>Appetizer</option>
                             <option value='Main Dish'>Main Dish</option>
                             <option value='Side Dish'>Side Dish</option>
@@ -93,7 +104,7 @@ const Guest = (props) => {
                             onChange={onChange}
                             name='bring'
                             type='text'
-                            placeholder='What am I bringing?'
+                            placeholder='Name of item'
                             maxLength='30'
                         />
                     </label>
