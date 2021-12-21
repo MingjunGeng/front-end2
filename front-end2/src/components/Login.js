@@ -14,7 +14,7 @@ const Login = () =>{
     const handleChange = (e) => {
         setValue({
             ...value,
-            [e.target.value]: e.target.value
+            [e.target.name]: e.target.value
         })
     }
     console.log(value)
