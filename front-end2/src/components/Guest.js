@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 
@@ -43,8 +43,21 @@ button {
 
 `;
 
+const initGuestForm = {
+    attending : '',
+    guestName : '',
+    guestEmail : '',
+    guestPhone : '',
+    category: '',
+    bring : '',
+
+}
+
 const Guest = (props) => {
-    const { values, submit, change, disabled, errors } = props;
+    const [values, setValues] = useState(initGuestForm)
+    const [errors, setErrors] = useState(initGuestForm)
+    // const { values, submit, change, disabled, errors } = props;
+    const { submit, change, disabled} = props;
 
     const onSubmit = evt => {
         evt.preventDefault();
@@ -72,7 +85,7 @@ const Guest = (props) => {
                             type='radio'
                             name='attending'
                             value='yes'
-                            checked={values.attending === 'yes'}
+                            // checked={values.attending === 'yes'}
                             onChange={onChange}
                         />
                     </label>
@@ -81,7 +94,7 @@ const Guest = (props) => {
                             type='radio'
                             name='attending'
                             value='no'
-                            checked={values.attending === 'no'}
+                            // checked={values.attending === 'no'}
                             onChange={onChange}
                         />
                     </label>
@@ -90,7 +103,7 @@ const Guest = (props) => {
                 <div id='guest-info'>
                     <label>Guest Name 
                         <input 
-                            value={values.guestName}
+                            // value={values.guestName}
                             onChange={onChange}
                             name='guestName'
                             type='text'
@@ -101,7 +114,7 @@ const Guest = (props) => {
 
                     <label>E-mail Address
                         <input
-                            value={values.guestEmail}
+                            // value={values.guestEmail}
                             onChange={onChange}
                             name='guestEmail'
                             type='text'
@@ -111,7 +124,7 @@ const Guest = (props) => {
 
                     <label>Phone Number
                         <input 
-                            value={values.guestPhone}
+                            // value={values.guestPhone}
                             onChange={onChange}
                             name='guestPhone'
                             type='tel'
@@ -122,7 +135,9 @@ const Guest = (props) => {
                     </label>
 
                     <label>Potluck Category 
-                        <select name='category' value={values.category} onChange={onChange}>
+                        <select name='category' 
+                        // value={values.category}
+                         onChange={onChange}>
                             <option value=''>------Select------</option>
                             <option value='Appetizer'>Appetizer</option>
                             <option value='Main Dish'>Main Dish</option>
@@ -136,7 +151,7 @@ const Guest = (props) => {
 
                     <label>What I'll Bring
                         <input 
-                            value={values.bring}
+                            // value={values.bring}
                             onChange={onChange}
                             name='bring'
                             type='text'
