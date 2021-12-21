@@ -1,9 +1,14 @@
 import React from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 
 const StyledGuest = styled.div`
 
+.top {
+    background-image: url(../Images/food2.jpg);
+    width: 90%;
+    image-render: cover;
+}
 #rsvp {
     display: flex;
     align-items: center;
@@ -35,6 +40,7 @@ button {
     margin: 20px;
     font-weight: bold;
   }
+
 `;
 
 const Guest = (props) => {
@@ -53,8 +59,10 @@ const Guest = (props) => {
 
     return (
         <StyledGuest className='form'>
-            <h1>You're invited to a potluck!</h1>
-            <p>Please let us know if you're coming and what you'll be bringing.</p>
+            <div className='top'>
+                <h1>You're invited to a potluck!</h1>
+                <p>Please let us know if you're coming and what you'll be bringing.</p>
+            </div>
             <form id='guest-form' onSubmit={onSubmit}>
                 
                 <div id='rsvp'>
