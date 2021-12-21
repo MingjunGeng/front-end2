@@ -1,22 +1,15 @@
+import React from 'react';
 import './App.css';
-import Guest from './components/Guest'
+import Guest from './components/Guest';
+import Organizer from './components/Organizer';
+import schema from './components/validation/Schema';
+import * as yup from 'yup';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Guest />
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+   
       </header>
     </div>
   );

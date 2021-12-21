@@ -126,7 +126,7 @@ const Organizer = (props) => {
                     <div>{errors.organizerName}</div>
                     <div>{errors.organizerEmail}</div>
                     <div>{errors.organizerPhone}</div>
-                    <div>{errors.organizerPassword}</div>
+                    <div>{errors.accessPassword}</div>
                     <div>{errors.potluckDate}</div>
                     <div>{errors.potluckLocation}</div>
                     <div>{errors.potluckName}</div>

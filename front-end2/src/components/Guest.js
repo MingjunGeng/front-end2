@@ -1,47 +1,47 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 
-const StyledGuest = styled.div`
+// const StyledGuest = styled.div`
 
-.topGuest {
-    background-image: url(front-end2\src\assets\food2.jpg);
-    width: 90%;
-    image-render: cover;
-}
-#rsvp {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    border: 1px black solid;
-    background-color: lightgray;
-  }
-.form {
-    border: 1px black solid;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: center;
-    margin: auto;
-    width: 90%;
-  }
+// .topGuest {
+//     background-image: url(front-end2\src\assets\food2.jpg);
+//     width: 90%;
+//     image-render: cover;
+// }
+// #rsvp {
+//     display: flex;
+//     align-items: center;
+//     margin: 10px;
+//     border: 1px black solid;
+//     background-color: lightgray;
+//   }
+// .form {
+//     border: 1px black solid;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: space-between;
+//     justify-content: center;
+//     margin: auto;
+//     width: 90%;
+//   }
   
-label {
-    display: flex;
-    justify-content: space-between
-    margin: 10px;
-    padding: 10px;
-  }
+// label {
+//     display: flex;
+//     justify-content: space-between
+//     margin: 10px;
+//     padding: 10px;
+//   }
   
-input, select {
-    margin-left: 50px;
-  }
-button {
-    margin: 20px;
-    font-weight: bold;
-  }
+// input, select {
+//     margin-left: 50px;
+//   }
+// button {
+//     margin: 20px;
+//     font-weight: bold;
+//   }
 
-`;
+// `;
 
 const Guest = (props) => {
     const { values, submit, change, disabled, errors } = props;
