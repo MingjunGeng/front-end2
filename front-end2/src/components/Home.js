@@ -1,7 +1,7 @@
 
 import React from "react";
-import { BrowserRouter as  Route, Switch } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 import '../CSS/Home.css'
 
 import splashppJpg from "./../images/splash-pp.jpeg"
@@ -9,6 +9,7 @@ import splashcreatePng from "./../images/splash_create.png"
 import splashfindPng from "./../images/splash_find.png"
 import send32Png from "./../images/send-32.png"
 import splashbuttoncreatePng from './../images/splash_button_create.png'
+import splashbuttonfindPng from './../images/splash_button_find.png'
 import Login from "./Login";
 
 
@@ -44,7 +45,8 @@ const Home = () => {
                     {/* <Switch> */}
                         {/* <Route  component={Login}/>    */}
                         <div className="home-border-radius-login">
-                            <Login />
+                        <Link to='/login'> <img src={splashbuttonfindPng} alt='splash button find Png'/></Link>
+                            {/* <Login /> */}
                         </div>
                         
                     {/* </Switch> */}

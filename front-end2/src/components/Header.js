@@ -10,6 +10,7 @@ import emailPng from '../images/email.png'
 import mapMonth from '../images/map-month.png'
 
 const Header = () => {
+    console.log("Header")
     return(
         <nav className="nav">
             <div className='nav-top'>
@@ -32,7 +33,8 @@ const Header = () => {
                 </div>
                 <div className="right-links">
                     <Link className="link" to='/login'>Login</Link>
-                    <Link className="link" to='/login'>Logout</Link>
+                    <Link className="link" to='/logout'>Logout</Link>
+                    <Link className="link" to='/guest'>Guest</Link>
                 </div>
             </div>
 

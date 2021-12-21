@@ -19,7 +19,7 @@ const Login = () =>{
             [e.target.name]: e.target.value
         })
     }
-    console.log(values)
+    console.log("Login ",values)
     const handleSubmit = (e) => {
         e.preventDefault();  
         setErrors(validation(values))
@@ -28,7 +28,7 @@ const Login = () =>{
 
     return(
         <div className="login-from">
-            {/* <h1>Login</h1> */}
+            <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     Username:
@@ -53,16 +53,6 @@ const Login = () =>{
                     />
                     {errors.password && <p className='error'>{errors.password}</p>}
                 </div>
-
-
-
-            {/* <label> Role:
-                <select name="role" onChange={handleChange}>
-                    <option value="">---Select your role---</option>
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-                </select>
-            </label> */}
 
             <button>Log in</button>
             </form>

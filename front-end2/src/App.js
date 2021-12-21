@@ -1,7 +1,7 @@
 
 
 import './App.css';
-import { BrowserRouter as  Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -13,15 +13,18 @@ import Guest from './components/Guest'
 function App() {
   return (
     <div className="App">
-      
-      <Header />
-      <Home />
+       {/* <Router> */}
+        <Header />
+      {/* <Home /> */}
+
       <Switch>
+        <Route exact path="/" component={Home}/>
         <Route path="/login" component={Login}/>
-        <Route path="/Guest" component={Guest}/>
+        <Route path="/guest" component={Guest}/>
         
       </Switch>
-      <Footer/>
+        <Footer/>
+      {/* </Router> */}
     </div>
   );
 }
