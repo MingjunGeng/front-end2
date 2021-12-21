@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const StyledGuest = styled.div`
 
-.top {
-    background-image: url(../Images/food2.jpg);
+.topGuest {
+    background-image: url(front-end2\src\assets\food2.jpg);
     width: 90%;
     image-render: cover;
 }
@@ -59,7 +59,7 @@ const Guest = (props) => {
 
     return (
         <StyledGuest className='form'>
-            <div className='top'>
+            <div className='topGuest'>
                 <h1>You're invited to a potluck!</h1>
                 <p>Please let us know if you're coming and what you'll be bringing.</p>
             </div>
