@@ -10,6 +10,7 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import Recipes from './components/Recipes';
 import Guest from './components/Guest'
+import Logout from './components/Logout';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/login" component={Login}/>
+        <Route path="/logout" component={Logout}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/recipes" component={Recipes}/>
         <Route path="/guest" component={Guest}/>

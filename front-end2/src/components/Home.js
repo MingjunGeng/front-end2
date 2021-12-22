@@ -34,7 +34,7 @@ const Home = () => {
                         <li>We Send the Invitations</li>
                         <li>Automated Reminder Emails</li>
                     </ul>
-                    <div> <img src={splashbuttoncreatePng} alt='splash button create'/></div>
+                    <Link to='/signup'> <img src={splashbuttoncreatePng} alt='splash button create'/></Link>
                     <div>
                         <small>View A Sample Schedule!</small>
                     </div>
