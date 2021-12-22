@@ -32,6 +32,7 @@ const Header = () => {
                     <Link className="link" to='/'>Home</Link>
                 </div>
                 <div className="right-links">
+                    <Link className="link" to='/signup'>Signup</Link>
                     <Link className="link" to='/login'>Login</Link>
                     <Link className="link" to='/logout'>Logout</Link>
                     <Link className="link" to='/guest'>Guest</Link>
