@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react'
 import { useHistory, Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 import validation from '../validation/validation';
 import '../CSS/Login.css'
@@ -12,6 +14,7 @@ const initForm = {
 const Login = () =>{
     const [values, setValues] = useState(initForm)
     const [errors, setErrors] = useState({});
+    const { push } = useHistory();
 
     const handleChange = (e) => {
         setValues({
@@ -19,10 +22,21 @@ const Login = () =>{
             [e.target.name]: e.target.value
         })
     }
-    console.log("Login ",values)
+    // console.log("Login ",values)
     const handleSubmit = (e) => {
         e.preventDefault();  
-        setErrors(validation(values))
+        console.log("Signup")
+        // setErrors(validation(values))
+        axios.post('https://potluckplanner06.herokuapp.com/api/auth/login', values)
+        .then(resp=>{
+            console.log("login : resp = ",resp);
+            // console.log("login : resp.data = ",resp.data.token);
+            // localStorage.setItem('token', resp.data.token);
+            push('/recipes');
+        })
+        .catch(err=>{
+            console.log(err);
+        })
        
     }
 

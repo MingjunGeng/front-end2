@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
+import Recipes from './components/Recipes';
 import Guest from './components/Guest'
 
 
@@ -18,7 +19,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/login" component={Login}/>
-        <Route path="/Signup" component={Signup}/>
+        <Route path="/signup" component={Signup}/>
+        <Route path="/recipes" component={Recipes}/>
         <Route path="/guest" component={Guest}/>
       </Switch>
       <Footer/>
