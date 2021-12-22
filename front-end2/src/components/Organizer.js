@@ -1,4 +1,3 @@
-import { getByDisplayValue } from "@testing-library/react";
 import react from "react";
 import TimePicker from "react-time-picker";
 
@@ -21,7 +20,7 @@ const Organizer = (props) => {
     const today = new Date();
 
     return (
-        <form id="organizer-form">
+        <form id="organizer-form" onSubmit={onSubmit}>
             <h2>Create a potluck!</h2>
             <p>Submit details about yourself and the event you're organizing in order to share your potluck!</p>
             <div id="event-organizer">'
@@ -113,10 +112,21 @@ const Organizer = (props) => {
             </div>
             <div id="dishes">
                 <div id="dishes-needed">
-                    {/* place component for adding dishes to list here  */}
+                <div id="dishes-container">
+
                 </div>
                 <div id="dishes-list">
-                    {/* place list returned from other component here */}
+                <div id="dishes-container">
+                    <h3>List of Suggested Dishes</h3>
+                <ul>
+                    {
+                        dishes.map((r)) => (
+                        <li key={r.id}>
+                            <div>{r.name}/</div>
+                        </li>
+                        ))
+                    }
+            </ul>
                 </div>
             </div>
             <div className='submit-btn'>
@@ -132,11 +142,8 @@ const Organizer = (props) => {
                     <div>{errors.potluckName}</div>
                     <div>{errors.potluckTime}</div>
                 </div>
-
+            </div>
         </form>
     )
 }
-
-
-
 export default Organizer;
