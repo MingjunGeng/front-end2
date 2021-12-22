@@ -1,21 +1,21 @@
-import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home';
 import styled from 'styled-components';
+import Background from './images/pexels-pixabay-326279.jpg'
+
+
 
 const StyledApp = styled.div`
-display: flex;
-justify-content: center;
-.App{
-  background-color: orange;
-}
-width:100%;
-height:100vh;
-nav {
-  background-color: red;
-}
 
+background-image: url(${Background});
+background-repeat: no-repeat;
+background-position: fixed;
+background-size: cover;
+.App{
+  padding:2%;
+}
 `
 
 function App() {
@@ -24,16 +24,10 @@ function App() {
 
   return (
   <StyledApp>
-    <div className="App">
-      <header className='navpage'>
-      <h1>POTLUCK PALOOZA</h1>
-        <nav>
-          <Link to='/'>Home</Link>
-          <Route exact path='/' component={Home}>
-            <Home />
-          </Route>
-        </nav>
-      </header>
+    <div className="App">     
+    <Router>
+      <Home />
+     </Router> 
     </div>
   </StyledApp>  
   );
