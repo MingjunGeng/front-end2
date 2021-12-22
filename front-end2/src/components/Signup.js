@@ -27,8 +27,8 @@ const Signup = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Signup")
-
-        axios.post(`https://potluckplanner06.herokuapp.com/api/auth/register`, newUser)
+        // axios.post('https://lbs-african-marketplace.herokuapp.com/auth/register', newUser)
+        axios.post(`http://potluckplanner06.herokuapp.com/api/auth/register`, newUser)
         .then(resp => {
             console.log('resp.data in Register.js: ', resp.data);
             // alert(`Your role is: ${resp.data.role}, you need your prop role to do something!`);
@@ -51,7 +51,7 @@ const Signup = () => {
                         value={newUser.username}
                         onChange={handleChange}
                     />
-                    {/* {errors.name && <p className='error'>{errors.name}</p>} */}
+                    {errors.name && <p className='error'>{errors.username}</p>}
                 </div>
 
                 <div>
@@ -63,7 +63,7 @@ const Signup = () => {
                         value={newUser.password}
                         onChange={handleChange}
                     />
-                    {/* {errors.password && <p className='error'>{errors.password}</p>} */}
+                    {errors.password && <p className='error'>{errors.password}</p>}
                 </div>
 
             <button>Sign Up</button>
