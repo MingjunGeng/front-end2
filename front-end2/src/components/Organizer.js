@@ -118,15 +118,15 @@ const Organizer = (props) => {
                 <div id="dishes-list">
                 <div id="dishes-container">
                     <h3>List of Suggested Dishes</h3>
-                <ul>
+                    <ul>
                     {
-                        dishes.map((r)) => (
+                        dishes.map((r)) => {
                         <li key={r.id}>
                             <div>{r.name}/</div>
                         </li>
-                        ))
+                        })
                     }
-            </ul>
+                    </ul>
                 </div>
             </div>
             <div className='submit-btn'>
