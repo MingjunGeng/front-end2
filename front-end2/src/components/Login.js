@@ -25,10 +25,11 @@ const Login = () =>{
     // console.log("Login ",values)
     const handleSubmit = (e) => {
         e.preventDefault();  
-        console.log("Signup", values)
-        setErrors(validation(values))
-        // axios.post('https://potluckplanner06.herokuapp.com/api/auth/login', values)
-        axios.post('http://localhost:4000/api/login', values)
+        console.log("Login", values)
+        // setErrors(validation(values))
+        // axios.post('https://backend-potluck-planner.herokuapp.com/api/users/login', values)
+        axios.post('http://potluckplanner06.herokuapp.com/api/auth/login', values)
+        // axios.post('http://localhost:4000/api/login', values)
         .then(resp=>{
             console.log("login : resp = ",resp);
             // const token = localStorage.getItem("token")
