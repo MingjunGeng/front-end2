@@ -25,13 +25,15 @@ const Login = () =>{
     // console.log("Login ",values)
     const handleSubmit = (e) => {
         e.preventDefault();  
-        console.log("Signup")
-        // setErrors(validation(values))
-        axios.post('https://potluckplanner06.herokuapp.com/api/auth/login', values)
+        console.log("Signup", values)
+        setErrors(validation(values))
+        // axios.post('https://potluckplanner06.herokuapp.com/api/auth/login', values)
+        axios.post('http://localhost:4000/api/login', values)
         .then(resp=>{
             console.log("login : resp = ",resp);
-            // console.log("login : resp.data = ",resp.data.token);
-            // localStorage.setItem('token', resp.data.token);
+            // const token = localStorage.getItem("token")
+            console.log("login : resp.data = ",resp.data.payload);
+            localStorage.setItem('token', resp.data.payload);
             push('/recipes');
         })
         .catch(err=>{
@@ -53,7 +55,7 @@ const Login = () =>{
                         value={values.username}
                         onChange={handleChange}
                     />
-                    {errors.name && <p className='error'>{errors.name}</p>}
+                    {errors.username && <p className='error'>{errors.username}</p>}
                 </div>
 
                 <div>
