@@ -16,7 +16,8 @@ const Users = (props) => {
     useEffect(()=>{
         const token = localStorage.getItem("token");
 
-        axios.get('http://localhost:8000/api/users', {
+        // axios.get('http://localhost:8000/api/users', {
+        axios.get('https://potluckplanner06.herokuapp.com/api/users', {
           headers: {
             authorization: token
           }
@@ -48,13 +49,13 @@ const Users = (props) => {
             {friends.map(friend => {
                 return (
                     <tr key={friend.id}>
-                        <td>{friend.id}</td>
+                        <td>{friend.user_id}</td>
                         <td>                  
                             <a target="_blank" >
                                 <img src={pinterestPng} alt='usersimg Jped' />
                             </a> </td>
                         
-                        <h3>{friend.name}</h3>
+                        <h3>{friend.username}</h3>
                     
                     </tr>
 
