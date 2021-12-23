@@ -10,7 +10,7 @@ const Recipes = () => {
 
 
     useEffect(() => {
-        // axiosWithAuth().get('/products')
+      
         
         const token = localStorage.getItem("token");
 

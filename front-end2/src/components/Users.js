@@ -11,7 +11,7 @@ const Users = (props) => {
     const initstate = []
     
 
-    const [friends, setFriends] = useState(initstate)
+    const [users, setUsers] = useState(initstate)
 
     useEffect(()=>{
         const token = localStorage.getItem("token");
@@ -24,7 +24,7 @@ const Users = (props) => {
         })
           .then(resp=> {
             console.log("FriendsList", resp.data)
-            setFriends(resp.data)
+            setUsers(resp.data)
           })
           .catch(err=> {
             console.log(err.response.data);
@@ -46,16 +46,16 @@ const Users = (props) => {
                     <th>Phone</th>
                 </tr>
             </thead>
-            {friends.map(friend => {
+            {users.map(user => {
                 return (
-                    <tr key={friend.id}>
-                        <td>{friend.user_id}</td>
+                    <tr key={user.id}>
+                        <td>{user.user_id}</td>
                         <td>                  
                             <a target="_blank" >
                                 <img src={pinterestPng} alt='usersimg Jped' />
                             </a> </td>
                         
-                        <h3>{friend.username}</h3>
+                        <h3>{user.username}</h3>
                     
                     </tr>
 
