@@ -14,7 +14,8 @@ const Recipes = () => {
         
         const token = localStorage.getItem("token");
 
-        axios.get('http://localhost:4000/api/products', {
+        // axios.get('http://localhost:4000/api/products', {
+        axios.get('https://potluckplanner06.herokuapp.com/api/foods', {
           headers: {
             authorization: token
           }
@@ -51,7 +52,8 @@ const Recipes = () => {
                         <a>
                             <img
                             className='recipes-list-image'
-                            src={item.imageUrl}
+                            src="https://takethemameal.com/files_images/recipes/recipes/300/77.jpg"
+                            // src={item.imageUrl}
                             alt={item.food_name}
                             />
                         </a>
