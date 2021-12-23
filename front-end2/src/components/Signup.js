@@ -28,7 +28,7 @@ const Signup = () => {
         e.preventDefault()
         console.log("Signup")
         // axios.post('https://lbs-african-marketplace.herokuapp.com/auth/register', newUser)
-        axios.post(`http://potluckplanner06.herokuapp.com/api/auth/register`, newUser)
+        axios.post(`https://potluckplanner06.herokuapp.com/api/auth/register`, newUser)
         .then(resp => {
             console.log('resp.data in Register.js: ', resp.data);
             // alert(`Your role is: ${resp.data.role}, you need your prop role to do something!`);

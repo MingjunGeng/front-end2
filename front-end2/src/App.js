@@ -10,7 +10,9 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import Recipe from './components/Recipe';
 import Recipes from './components/Recipes';
-import Guest from './components/Guest'
+import Potlucks from './components/Potlucks';
+import Users from './components/Users';
+import Guest from './components/Guest';
 import Logout from './components/Logout';
 
 
@@ -23,8 +25,11 @@ function App() {
         <Route path="/login" component={Login}/>
         <Route path="/logout" component={Logout}/>
         <Route path="/signup" component={Signup}/>
+        {/* <Route path="/recipes/:id" component={Recipe}/> */}
+        <Route path="/potlucks" component={Potlucks}/>
         <Route path="/recipes/:id" component={Recipe}/>
         <Route path="/recipes" component={Recipes}/>
+        <Route path="/users" component={Users}/>
         <Route path="/guest" component={Guest}/>
       </Switch>
       <Footer/>
