@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Link } from 'react-router-dom'
 import styled from 'styled-components';
 import Banner from '../images/pexels-jonathan-borba-2878741.jpg';
@@ -6,6 +6,14 @@ import FoodOne from '../images/food1.jpg';
 import FoodTwo from '../images/food2.jpg';
 import FoodThree from '../images/food3.jpg';
 import FoodFour from '../images/food4.jpg';
+import Modal from 'react-modal'
+import Organizer from "./Organizer";
+import Login from "./Login";
+import Signup from './Signup';
+import { GlobalStyle } from "../globalStyles";
+
+
+
 
 const StyledHome = styled.div`
 display: flex;
@@ -18,7 +26,7 @@ border-radius: 20px;
 .top h1{
     font-family: 'cookie', cursive;
     font-size: 5rem;
-    color: saddlebrown;
+    color: crimson;
     text-shadow: 1px 1px 2px black, 0 0 25px chocolate, 0 0 5px chocolate;
 }
 
@@ -33,8 +41,7 @@ border-radius: 20px;
 
 .top button{
     background-color: peru;
-    width: 10%;
-    padding: 1% 0%;
+    padding: 1% 3%;
     border-radius: 20px;
     border: 0;
     color: white;
@@ -45,10 +52,24 @@ border-radius: 20px;
 button:hover {
     background-color: sandybrown;
     color: black;
+    cursor: pointer;
+
 }
 
+#find:disabled {
+    color: crimson;
+    background-color: white;
+    border: 2px solid crimson;
+    cursor: not-allowed;
+  }
 
 
+  .errors {
+      font-size: 1rem;
+      color: red;
+      font-weight: bold;
+      font-family: times;
+  }
 
 h2{
     font-family: 'cookie', cursive;
@@ -138,7 +159,8 @@ input[type=password]:focus {
 }
 
 .signup button{
-    width: 30%;
+    padding: 5% 0%;
+    width: 300px;
 }
 
 .recipes {
@@ -172,16 +194,12 @@ input[type=password]:focus {
 
 function Home(props){
     const { values, submit, change, disabled, errors } = props;
+    const [showModal, setShowModal] = useState(false);
 
-    const onSubmit = evt => {
-        evt.preventDefault();
-        submit();
-    }
-    const onChange = evt => {
-        const { name, value, checked, type } = evt.target;
-    }
-
-
+    const openModal = () => {
+        setShowModal(prev => !prev);
+    };
+   
     return (
     <StyledHome>
       <div className='container'>
@@ -198,28 +216,36 @@ function Home(props){
                 <div className="signup">
                     <h2>SignUp</h2>
                     <p>Sign-Up Now to create a customizable online PotLuck Planner! <br />If already signed Up please Log-In Now!</p>
-                    <button>Sign-Up</button>
-                    <button>Log-In</button>
+                    <Link to='Signup'><button>Sign-Up</button></Link>
+                    
+                    <Link to='login'><button onClick={openModal}>Log-In</button>
+                    <Login showModal={showModal} setShowModal={setShowModal} />
+                    <GlobalStyle />
+                    </Link>
+                    <Route path='/login' component={Login.props} />
                 </div>
                 <div className="guest">
                     <h2>Find your PotLuck!</h2>
                     <p>Find your Potluck group below!</p>
-                    <form id="find-form" onSubmit={onSubmit}>
+                    <form id="find-form" >
                         <label>Enter Host's LastName
+
                             <input
                                 name='hostName'
                                 type='input'
-                                onChange={onChange}
+                                
                                 maxLength='30'
                             />
                         </label>
                         <label>Password
+                            
                             <input 
                                 name="guestPassword"
+                                
                                 type='password'
                             />
                         </label>
-                        <button id="find" disabled={disabled}>Find</button>
+                        <button id="find" >Find</button>
                     </form>
                 </div>
             </div>
