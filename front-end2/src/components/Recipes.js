@@ -46,7 +46,7 @@ const Recipes = () => {
                 items.map(item=>(
                 <div 
                 className="recipes-card"
-                key={item.id}>
+                key={item.food_id}>
                         {/* <h1>text</h1> */}
                     {/* <div className={'recipes-list-img'+ (((item.id+1)*2-1)+(item.id%2*(1)))%2 }> */}
                         <a>
