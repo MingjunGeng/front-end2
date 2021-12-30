@@ -13,6 +13,7 @@ import Recipes from './components/Recipes';
 import AddRecipes from  './components/AddRecipes'
 import Potlucks from './components/Potlucks';
 import Users from './components/Users';
+import AddUsers from  './components/AddUsers'
 import Guest from './components/Guest';
 import Logout from './components/Logout';
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/recipes" component={Recipes}/>
         <Route path="/addrecipes" component={AddRecipes}/>
         <Route path="/users" component={Users}/>
+        <Route path="/addusers" component={AddUsers}/>
         <Route path="/guest" component={Guest}/>
       </Switch>
       <Footer/>
