@@ -39,6 +39,7 @@ const Header = () => {
                     <Link className="link" to='/recipes'>Recipes</Link>
                     <Link className="link" to='/addrecipes'>AddRecipes</Link>
                     <Link className="link" to='/users'>Users</Link>
+                    <Link className="link" to='/addusers'>AddUsers</Link>
                     <Link className="link" to='/guest'>Guest</Link>
                 </div>
             </div>
