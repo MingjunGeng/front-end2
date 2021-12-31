@@ -5,7 +5,7 @@ import axios from 'axios'
 import '../CSS/AddPotlucks.css'
 
 const initialFormValues = {
-    potluck_id: '',
+    // potluck_id: '',
     potluck_name: '',
     potluck_description: '',
     potluck_date: '',
@@ -14,7 +14,7 @@ const initialFormValues = {
     organizer: ''
 }
 const initialFormErrors = {
-    potluck_id: '',
+    // potluck_id: '',
     potluck_name: '',
     potluck_description: '',
     potluck_date: '',
@@ -31,7 +31,7 @@ const AddPotlucks = () => {
     const onSubmit = (event) => {
         event.preventDefault()
         const newItem = {
-            potluck_id: Date.now(),
+            // potluck_id: Date.now(),
             potluck_name: formValues.potluck_name, 
             potluck_description: formValues.potluck_description,
             potluck_date: formValues.potluck_date, 
@@ -91,7 +91,7 @@ const AddPotlucks = () => {
                     </label>
                 </div>
 
-                {/* username */}
+                {/* potluck_description */}
                 <div className='form-div'>
                     <div className='label-group'>
                         <h2>Input potluck_description</h2>
@@ -115,7 +115,7 @@ const AddPotlucks = () => {
                     </div>
                     <label className='location'>
                             <input
-                                type="text"
+                                type="date"
                                 name="potluck_date"
                                 value={formValues.potluck_date}
                                 onChange={onChange}
@@ -133,7 +133,7 @@ const AddPotlucks = () => {
                     </div>
                     <label className='location'>
                             <input
-                                type="text"
+                                type="time"
                                 name="potluck_time"
                                 value={formValues.potluck_time}
                                 onChange={onChange}
@@ -169,7 +169,7 @@ const AddPotlucks = () => {
                     </div>
                     <label className='location'>
                             <input
-                                type="text"
+                                type="number"
                                 name="organizer"
                                 value={formValues.organizer}
                                 onChange={onChange}
