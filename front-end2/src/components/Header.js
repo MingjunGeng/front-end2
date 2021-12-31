@@ -36,10 +36,10 @@ const Header = () => {
                     <Link className="link" to='/login'>Login</Link>
                     <Link className="link" to='/logout'>Logout</Link>
                     <Link className="link" to='/potlucks'>Potlucks</Link>
+                    <Link className="link" to='/addpotlucks'>AddPotlucks</Link>
                     <Link className="link" to='/recipes'>Recipes</Link>
                     <Link className="link" to='/addrecipes'>AddRecipes</Link>
                     <Link className="link" to='/users'>Users</Link>
-                    <Link className="link" to='/addusers'>AddUsers</Link>
                     <Link className="link" to='/guest'>Guest</Link>
                 </div>
             </div>
