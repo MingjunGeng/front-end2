@@ -11,6 +11,7 @@ import Home from './components/Home';
 import Recipe from './components/Recipe';
 import Recipes from './components/Recipes';
 import AddRecipes from  './components/AddRecipes'
+import AddUserToPotlucks from './components/AddUserToPotlucks'
 import Potlucks from './components/Potlucks';
 import Users from './components/Users';
 import AddPotlucks from  './components/AddPotlucks'
@@ -33,6 +34,7 @@ function App() {
         <Route path="/recipes/:id" component={Recipe}/>
         <Route path="/recipes" component={Recipes}/>
         <Route path="/addrecipes" component={AddRecipes}/>
+        <Route path="/adduserpopotlucks" component={AddUserToPotlucks}/>
         <Route path="/users" component={Users}/>
         <Route path="/guest" component={Guest}/>
       </Switch>
